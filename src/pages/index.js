@@ -1,23 +1,40 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
+import { graphql } from "gatsby"
 import SEO from "../components/seo"
-import Avatar from "../components/avatar"
+import Bio from "../components/Bio"
+import Certificates from "../components/Certificates"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Avatar />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+export const query = graphql`
+  query GET_DATA {
+    allSite {
+      edges {
+        node {
+          siteMetadata {
+            description
+          }
+        }
+      }
+    }
+    allFile {
+      edges {
+        node {
+          publicURL
+          id
+          name
+        }
+      }
+    }
+  }
+`
+
+const IndexPage = ({ data }) => {
+  return (
+    <>
+      <SEO title="Home" />
+      <Bio description={data.allSite.edges[0].node.siteMetadata.description} />
+      <Certificates certificates={data.allFile.edges} />
+    </>
+  )
+}
 
 export default IndexPage

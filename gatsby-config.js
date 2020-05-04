@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `zefetorres`,
-    description: `I'm an Engineer in Computer Systems, competent in all aspects of software development.`,
+    title: `zefe`,
+    description: `I'm an Engineer in Computer Systems`,
     author: `@zefe`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,7 +25,13 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/zefe.jpg`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: "src/utils/typography.js",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
