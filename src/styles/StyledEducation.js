@@ -39,10 +39,8 @@ export const Item1 = styled.div`
 
 export const Item2 = styled.div`
   width: 50%;
-  background: ${colors.darkBlue};
-  text-align: center;
   & p {
-    padding: 1.2em;
+    color: #000;
   }
   @media only screen and (max-width: 600px) {
     width: 100%;
@@ -50,7 +48,9 @@ export const Item2 = styled.div`
 `
 
 export const Article = styled.div`
-  background: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
 `
 
 export const Button = styled.button`

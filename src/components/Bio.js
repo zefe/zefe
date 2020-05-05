@@ -19,7 +19,7 @@ const Bio = ({ description }) => {
 
         <Link to="/Education/">
           {" "}
-          <Button>Portfolio</Button>
+          <Button>Education</Button>
         </Link>
       </div>
       <Avatar />

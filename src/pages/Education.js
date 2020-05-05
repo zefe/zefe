@@ -1,25 +1,25 @@
 import React from "react"
-import { Link } from "gatsby"
 import SEO from "../components/seo"
 import Avatar from "../components/avatar"
 import Certificates from "../components/Certificates"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import {
   Container,
   Row,
   Item1,
   Item2,
   Article,
+  Button,
 } from "../styles/StyledEducation"
 
 export const query = graphql`
   query GET_CERTIFICATES {
-    allFile {
+    allFile(filter: { extension: { eq: "png" }, relativePath: {} }) {
       edges {
         node {
-          publicURL
           id
           name
+          publicURL
         }
       }
     }
@@ -46,14 +46,19 @@ const Education = ({ data }) => (
               </span>{" "}
               is constant and not just talk about technology, because in the
               field of life there will always be new experiences, and that is
-              what makes us experts in the area that we are passionate about.
+              what makes us experts in the area that we are passionate about.{" "}
+              <br />
+              Learn something new before bed.
             </p>
-            <p>Learn something new before bed.</p>
+
+            <Link to="/">
+              {" "}
+              <Button>Home</Button>
+            </Link>
           </Article>
         </Item2>
       </Row>
     </Container>
-    <Link to="/">Go back to the homepage</Link>
     <Certificates certificates={data.allFile.edges} />
   </>
 )

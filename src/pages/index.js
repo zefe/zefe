@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Bio from "../components/Bio"
-import Certificates from "../components/Certificates"
+import Project from "../components/Project"
 
 export const query = graphql`
   query GET_DATA {
@@ -15,15 +15,6 @@ export const query = graphql`
         }
       }
     }
-    allFile {
-      edges {
-        node {
-          publicURL
-          id
-          name
-        }
-      }
-    }
   }
 `
 
@@ -32,7 +23,7 @@ const IndexPage = ({ data }) => {
     <>
       <SEO title="Home" />
       <Bio description={data.allSite.edges[0].node.siteMetadata.description} />
-      <Certificates certificates={data.allFile.edges} />
+      <Project />
     </>
   )
 }

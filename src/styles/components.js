@@ -14,7 +14,7 @@ export const StyledBio = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 2rem 2rem;
   color: white;
   margin-bottom: 5rem;
@@ -170,7 +170,7 @@ export const Content = styled.div`
   `}
 `
 
-export const StyledCertificates = styled.div`
+export const StyledCards = styled.div`
   background-color: ${colors.softGray};
   display: flex;
   flex-direction: column;
