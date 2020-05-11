@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const colors = {
-  green: "#98ca3f",
+  blue: "#1C8ADB",
   orange: "#f8b71c",
   gray: "#969696",
   darkBlue: "#1c3643",
@@ -57,11 +57,11 @@ export const Button = styled.button`
   width: 200px;
   height: 40px;
   cursor: pointer;
-  background-color: ${colors.green};
-  color: ${colors.softGray};
+  background-color: ${colors.softGray};
+  color: ${colors.blue};
   border-radius: 10px;
   &:hover {
-    background-color: ${colors.softGray};
-    color: ${colors.green};
+    background-color: ${colors.blue};
+    color: ${colors.softGray};
   }
 `

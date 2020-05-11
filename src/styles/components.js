@@ -10,78 +10,6 @@ export const colors = {
   softGray: "#f6f8f9",
 }
 
-export const StyledBio = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 2rem 2rem;
-  color: white;
-  margin-bottom: 5rem;
-  overflow: hidden;
-  position: relative;
-  
-  div{
-    padding: 1rem;
-    width: 40vw;
-    color: #000;
-  };
-  & h2 {
-    padding-bottom: 20px;
-  };
-  @media only screen and (max-width: 600px) {
-  div {
-    width: 100%;
-    color: #ffffff;
-    background-color: ${colors.darkBlue};
-  };
-  & h2 {
-    padding-bottom: 0px;
-  };
-}
-  ${above.medium`
-    padding: 2rem 4rem;
-    flex-direction: row;
-    & small{
-      font-size: 0.8rem;
-    };
-  `}
-  ${above.mediumL`
-    padding: 2rem 4rem;
-    flex-direction: row;
-    & small{
-      font-size: 0.8rem;
-    };
-  `}
-  ${above.large`
-    padding: 2rem 10rem;
-    flex-direction: row;
-  `}
-  &:before{
-    content: " ";
-    z-index: -1;
-    position: absolute;
-    transform: rotate(-19deg);
-    border-radius: 35%;
-    top: -25%;
-    width: 120%;
-    height: 15rem;
-    ${above.medium`
-      height: 20rem;
-      top: -50%;
-    `}
-    ${above.mediumL`
-      height: 30rem;
-      top: -60%;
-    `}
-    ${above.large`
-      width: 110vw;
-      height: 52vw;
-      top: -66%;
-    `}
-  };
-`
-
 export const Button = styled.button`
   width: 200px;
   height: 40px;
@@ -186,7 +114,7 @@ export const StyledCards = styled.div`
     object-position: center;
     margin: 0;
   }
-  article {
+  div {
     display: flex;
     flex-direction: column;
     height: 290px;

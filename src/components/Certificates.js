@@ -1,15 +1,18 @@
 import React from "react"
 import { StyledCards } from "../styles/components"
+import Img from "gatsby-image"
 
-export default function Certificates({ certificates }) {
+export default function Certificates({ data }) {
+  console.log(data)
+
   return (
     <StyledCards>
       <h2>Certificates</h2>
       <section>
-        {certificates.map(({ node }) => {
+        {data.allFile.edges.map(({ node }) => {
           return (
             <article key={node.id}>
-              <img src={node.publicURL} alt={node.name} />
+              <Img fluid={node.childImageSharp.fluid} />
             </article>
           )
         })}
