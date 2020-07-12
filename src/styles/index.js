@@ -23,12 +23,6 @@ export const GlobalStyles = createGlobalStyle`
   main{
     padding-top: 3.5rem;
   }
-  h1,h2{
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  p{
-    font-family: Arial, Helvetica, sans-serif;
-  }
   ${above.medium`
    main{
       padding-top: calc(3.5rem - 100vh);

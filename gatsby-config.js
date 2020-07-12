@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `zefe`,
-    description: `I'm an Engineer in Computer Systems`,
+    description: `I'm an Software Engineer`,
     author: `@zefe`,
   },
   plugins: [
@@ -31,7 +31,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: "src/utils/typography.js",
+        pathToConfigModule: "src/utils/typography",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

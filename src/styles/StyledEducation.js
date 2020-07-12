@@ -1,12 +1,13 @@
 import styled from "styled-components"
 
 export const colors = {
-  blue: "#1C8ADB",
+  blue: "rgb(142, 220, 230)",
   orange: "#f8b71c",
   gray: "#969696",
   darkBlue: "#1c3643",
   lightBlue: "#1e5372",
-  softGray: "#f6f8f9",
+  red: "rgb(214, 116, 116)",
+  white: "rgb(208, 205, 223)",
 }
 
 export const Container = styled.div`
@@ -26,11 +27,15 @@ export const Row = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-color: ${colors.darkBlue};
   }
 `
 export const Item1 = styled.div`
   width: 30%;
+  & p,
+  h2,
+  h3 {
+    color: #000;
+  }
   @media only screen and (max-width: 600px) {
     width: 50%;
     text-align: center;
@@ -39,7 +44,8 @@ export const Item1 = styled.div`
 
 export const Item2 = styled.div`
   width: 50%;
-  & p {
+  & p,
+  h2 {
     color: #000;
   }
   @media only screen and (max-width: 600px) {
@@ -57,11 +63,12 @@ export const Button = styled.button`
   width: 200px;
   height: 40px;
   cursor: pointer;
-  background-color: ${colors.softGray};
-  color: ${colors.blue};
+  background-color: #fff;
+  color: ${colors.red};
+  font-weight: bold;
   border-radius: 10px;
   &:hover {
-    background-color: ${colors.blue};
-    color: ${colors.softGray};
+    background-color: ${colors.red};
+    color: ${colors.white};
   }
 `
